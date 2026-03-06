@@ -39,4 +39,6 @@ return [
 
     'supports_credentials' => true,
 
+    // Updated: 2026-03-05 CORS configuration for Vercel deployment
+
 ];
