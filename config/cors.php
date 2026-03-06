@@ -21,6 +21,7 @@ return [
 
     'allowed_origins' => [
         'https://book-heaven-henna.vercel.app',
+        'https://book-heaven-three.vercel.app',
         'https://book-heaven-git-main-krisr3710-1367s-projects.vercel.app',
         'https://book-heaven-91xytffpj-krisr3710-1367s-projects.vercel.app',
         'http://localhost:3000',
