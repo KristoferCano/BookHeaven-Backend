@@ -1,10 +1,19 @@
-# Nixpacks configuration for Laravel backend
-# Only enable PHP, disable automatic Node.js detection
+# Nixpacks configuration for Laravel backend (PHP only)
+# Disable Node.js/npm detection even if package.json exists
+
 [providers]
 php = true
 node = false
 
-# PHP specific configuration
 [phases.setup]
+# Verify PHP and Composer are available
 cmds = ["php --version", "composer --version"]
+
+[phases.build]
+# Install PHP dependencies with optimization
+cmds = [
+  "composer install --no-dev --optimize-autoloader --no-ansi --no-interaction --prefer-dist",
+  "chmod -R 755 storage bootstrap/cache"
+]
+
 

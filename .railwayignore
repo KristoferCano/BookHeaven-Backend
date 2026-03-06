@@ -1,0 +1,44 @@
+# Railway ignore file - exclude unnecessary files from deployment
+
+# Dependencies
+node_modules/
+/vendor/
+
+# Local files
+.env.local
+.env.*.local
+.env.backup
+.env.*.php
+
+# OS files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Laravel
+bootstrap/cache/*
+storage/logs/*
+storage/framework/cache/*
+storage/framework/sessions/*
+storage/framework/testing/*
+database/database.sqlite
+database/database.sqlite-journal
+
+# Testing
+coverage/
+.phpunit.result.cache
+
+# Package files
+composer.lock
+package-lock.json
+pnpm-lock.yaml
+
+# Build files
+public/hot
+public/storage
+
+# Temporary
+*.tmp
+*.temp
+.tmp/
