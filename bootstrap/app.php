@@ -12,6 +12,9 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
+        // CORS middleware - must run first
+        $middleware->append(\App\Http\Middleware\CorsMiddleware::class);
+        
         // Alias de middleware
         $middleware->alias([
             'role' => \App\Http\Middleware\CheckRole::class,
