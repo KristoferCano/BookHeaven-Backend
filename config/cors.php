@@ -19,7 +19,13 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['*'],
+    'allowed_origins' => [
+        'https://book-heaven-henna.vercel.app',
+        'https://book-heaven-git-main-krisr3710-1367s-projects.vercel.app',
+        'https://book-heaven-91xytffpj-krisr3710-1367s-projects.vercel.app',
+        'http://localhost:3000',
+        'http://localhost:5173',
+    ],
 
     'allowed_origins_patterns' => [],
 
@@ -29,6 +35,6 @@ return [
 
     'max_age' => 0,
 
-    'supports_credentials' => false,
+    'supports_credentials' => true,
 
 ];
